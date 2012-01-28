@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>ic/announcement.png</file>
+    <file>ic/announcementadd.png</file>
+    <file>ic/announcementdel.png</file>
+    <file>ic/exit.png</file>
+    <file>ic/preferences.png</file>
+    <file>ic/announcementedit.png</file>
+  </qresource>
+</RCC>
