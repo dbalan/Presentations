@@ -1,0 +1,9 @@
+*.aux  
+*.out  
+*.toc
+*.log
+*~        
+*.nav  
+*.snm  
+*backup
+
