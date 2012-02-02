@@ -1,22 +1,29 @@
 
 \documentclass{beamer}
 \usetheme{Copenhagen}
-
 \usecolortheme{beaver}
+
+\usepackage{color}
+\usepackage[strings]{underscore}
 \begin{document}
 
 % \logo{\includegraphics[height=0.5cm]{cet.jpg}} 
 
 \title[{\bf ARIA}-Asterisk Radio Architecture]{{\bf A}sterisk {\bf R}ad{\bf I}o {\bf A}rchitecture}
 \subtitle{\it VoIP Based Campus Announcement System}  
-\author{Dhananjay M Balan}
+\author[Rajasree, Dhananjay, Abil, Deepak, Sujith, Thomas]{Prof:
+  Rajasree M S.(Principal Investigator) \and Dhananjay M Balan \and Abil N Goerge \and
+  Deepak Krishnan \and Thomas Abraham\and Sujith Ganapathiyil}
  
 \institute[College Of Engineering] % (optional)
 {
-  dbalan@acm.org\\
+ 
+ 
+  Department Of Computer Science \& Engineering.\\
   College Of Engineering, Trivandrum\\
-  University Of Kerala.
-\centerline{\includegraphics[height=2cm]{cet.jpg}}
+  University Of Kerala. \\
+ 
+\centerline{\includegraphics[height=1.0cm]{cet.jpg}}
 
 }
 \date{\today} 
@@ -24,7 +31,7 @@
 \frame{\titlepage
   } 
 
-\frame{\frametitle{Table of contents}\tableofcontents} 
+\frame[plain]{\frametitle{Outline}\tableofcontents[currentframes]} 
 
 \section{Introduction}
 \subsection{Problem}
@@ -44,17 +51,18 @@
   \item Limited {\bf scalability and extensibility}.
     \begin{itemize}
 
-    \item {\it System can't grow beyond a point, power and
+    \item {\it System cannot grow beyond a point, power and
         load problems.}
     \item {\it No scope of extending the system
         further. (Things like video, two way paging
-        etc.)}
+        etc.)} \pause
     \end{itemize}
     
+\emph{\textcolor{red} {Use an existing network!!}}
   \end{enumerate}
 }
 
-\subsection{Solution}
+\subsection{Approaches}
 
 \frame{
   \frametitle{VoIP}
@@ -63,13 +71,15 @@
   \hfill{\bf - Wikipedia.org, Accessed on February 1, 2012}
 }
 
+\subsection{VoIP Advantages}
 \frame[shrink]{
   \frametitle{Advantages}
   \begin{enumerate}
+\item Can utilize the existing IP network in campus. \\
+    - A major cost in implementing the system can be made practically nil.\pause
   \item Each client can be addressed individually. \\
-    - User can create gorups to address on-the fly.\pause
-  \item Can utilize the existing IP network in campus. \\
-    - A major cost in implimenting the system can be made practically nil.\pause
+    - User can create groups to address on-the fly.\pause
+  
   \item Scalable - Adding a new client is simple as long as there is
     network connectivity \\ 
     - No load problems. \pause
@@ -78,19 +88,31 @@
     - Two way communication systems.
     \pause
   \item Provision for remote access. \pause
-  \item Easy modification of system - No hard circuits. \pause
+  \item Easy modification of system - No hard circuits.
   \end{enumerate}
 }
 
 \frame{   
   \frametitle{Products Currently Available}
+
   \begin{enumerate}
-  \item xyz 
-  \end{enumerate}
-  {\bf No Free Software} products exist, Though almost all core components are available in a compatible license.   
+  \item LanTone Systems. - \url{http://www.voip.com.sg/voip-products/ip-pa-system.html}
+  \item AbleTEK IP-PA System - 
+      \url{http://www.abletek.co.uk/ip\_public\_address.php}
+  \item TalkMaster System - \url{http://www.digac.com/ii3\_talkmaster.htm}
+  \end{enumerate} \pause
+  All these products cost {\bf \~\$1500} for the software itself, and comes
+  with a minimum {\bf device purchase limit} and {\bf no inter-operability}.\pause
+ 
+  {\bf No Free Software} products exist, Though almost all core components are available in a compatible license   
 }
 
 \section{ARIA System.}
+\frame{
+\frametitle{ARIA}
+  \large{\bf A}sterisk {\bf R}ad{\bf I}o {\bf A}rchitecture
+}
+
 \subsection{Design}
 
 \frame{
@@ -98,7 +120,7 @@
   \centerline{\includegraphics[width=\textwidth]{functional_diagram.png}}
 }
 
-
+\subsection{ARIA-Components}
 \frame{
   \frametitle{Protocols}
   \begin{enumerate}
@@ -119,11 +141,12 @@
   
 }
 
+\subsection{ARIA-Working}
 \frame[plain]{
   \frametitle{Working}
   \centerline{\includegraphics[width=\textwidth]{working.png}}
 }
-\subsection{ToDo}
+\subsection{Challenges}
 \frame{
   \frametitle{Challenges}
   \begin{enumerate}
@@ -133,18 +156,19 @@
   \end{enumerate}
 }
 \section{Prototype}
+\subsection{Expenditure}
 \frame[shrink,plain]{
   \frametitle{Expenditure}
   \begin{itemize}
   \item Consumables
     \begin{itemize}
-    \item Network equipments Rs. 1500
+    \item Network equipment Rs. 1500
     \item Import charges on equipment Rs. 7000
     \item Misc Charges: Rs. 1000
 
     \end{itemize}
 
-  \item Equipments
+  \item Equipment
     \begin{itemize}
     \item IP Phone  Rs. 5000
     \item IP speakers x2 Or Analog Gateway+ Speakers Rs. 10000
@@ -170,14 +194,14 @@
   {\bf Real World Implementation:} Add cost of each client needed.
 }
 
-          
+\section{Conclusion}          
 \frame{
   \frametitle{Conclusion}
   \begin{enumerate}
    \item Only {\bf Open Source} Final Product in market.
-   \item Provides easy and streamlined aproach to install, configure and manage a system of any size - where as most proprietary system has a minimum limit.
+   \item Provides easy and streamlined approach to install, configure and manage a system of any size - where as most proprietary system has a minimum limit.
    \item Uses open systems and protocols wherever possible.
-   \item The system can be accessed from remote.
+   \item The system can be accessed remotely.
   \end{enumerate}
 }
 \end{document}
